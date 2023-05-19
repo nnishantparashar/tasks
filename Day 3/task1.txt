@@ -1,0 +1,46 @@
+//How to comapre two JSON have the same properties without order?
+
+We can compare two JSON having unordered properties with the help of sort() and stringify() methods.
+
+The sort() method will sort the key in acsending order and the stringified() method will gives the string version of keys, so that we can iterate and compare, if they are same of not. 
+
+Example:
+
+let obj1 = {
+	name: 'ABC',
+	age: 30
+}
+
+let obj2 = {
+	age: 30,
+	name: 'ABC'
+}
+
+//sorting of keys
+
+ const keys1 = Object.keys(obj1).sort();
+ const keys2 = Object.keys(obj1).sort();
+
+
+//Stringifying of keys
+
+const stringifiedKeys1 = JSON.stringify(keys1)
+const stringifiedKeys2 = JSON.stringify(keys2)
+
+//Comparison
+
+if(stringifiedKeys1 == stringifiedKeys2){
+	for(var key in obj1){
+		if(obj1[key]!= obj2[key]){
+			return 'Not Equal';
+		}
+	}
+	return 'Equal';
+}else{
+	return 'Not Equal';
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+//1.Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP/1.1: When we make a request to the server for on any webpage & server responds to you as a resource html 
+page. For sending the request and the response there is a TCP connection established between client & server. 
+Again you make a request to the server for other resources like- image img.jpg & the server gives a response 
+as an image img.jpg. The connection was not lost here after the first request because it adds a keep-alive 
+header which is the part of the request so there is an open connection between the server & client. There are 
+several requests & responses, which are merged in a single connection. These are the drawbacks of HTTP/1.1: The 
+first problem is HTTP/1.1 transfer all the requests & responses in the plain text message form. The second one 
+is head of line blocking in which TCP connection is blocked all other requests until the response does not 
+receive. All the information related to the header file is repeated in every request(information overhead).
+
+HTTP/2: HTTP/2 was developed over the SPDY protocol. HTTP/2 works on the binary framing layer instead of textual 
+that converts all the messages in binary format. It works on fully multiplexed that is one TCP connection is used 
+for multiple requests. HTTP/2 uses HPACK which is used to split data from header. It compresses the header. 
+The server sends all the other files like CSS & JS without the request of the client using the PUSH frame.
+

@@ -1,0 +1,44 @@
+//2.Write a blog about objects and its internal representation in Javascript
+
+Objects are important data types in javascript. Objects are different than primitive datatypes (i.e. number, 
+string, boolean, etc.). Primitive data types contain one value but Objects can hold many values in form of 
+Key: value pair. These keys can be variables or functions and are called properties and methods, respectively, 
+in the context of an object.
+
+"objects in JavaScript may be defined as an unordered collection of related data, of primitive or reference 
+types, in the form of “key: value” pairs."
+
+An object can be created in many ways:
+One of easiest way to create a javascript object is object literal, simply define the property and values inside
+ curly braces as shown below-
+let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+
+JavaScript Object with Constructor function and with help of new keyword, constructor function allows to create 
+multiple objects of same flavor 
+as shown below:
+function Vehicle(name, maker) {
+   this.name = name;
+   this.maker = maker;
+}
+let car1 = new Vehicle(’Fiesta’, 'Ford’);
+let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
+
+JavaScript Object with Keyword new:
+
+var person = new Object();
+person.firstName = “John”;
+person.lastName = “Doe”;
+person.age = 50;
+person.eyeColor = “blue”;
+
+Objects can also be created using the Object.create() method:
+
+// Animal properties
+var Animal = {
+  type: 'Invertebrates', 
+  }
+
+
+// Create new animal type called Fishes
+var fish = Object.create(Animal);
+fish.type = 'Fishes';
