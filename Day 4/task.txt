@@ -1,0 +1,212 @@
+var intArray1 = [23, 42, 56, 89, 12, 77, 131, 49, 20, 45, 90, 56];
+var strArray1 = ['java', 'python', 'mongodb', 'javascript', 'azure', 'docker', 'kubernetes'];
+var arr1 = [12, 8, 4, 7, 5];
+var arr2 = [11, 23, 3, 6, 24];
+//Using Anonymous Function
+//Print odd number of an array
+var oddNumbers = function (array) {
+    for(let i = 0; i < array.length; i++){
+        if(array[i] % 2 !== 0){
+            console.log(array[i]);
+        }
+    }
+}
+
+//oddNumbers(intArray1);
+
+//Convert all the strings to title caps in a string array
+
+var capCase = function(array) {
+  return array.map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
+
+//console.log(capCase(strArray1));
+
+//Sum of all numbers in array
+
+var sumElements = function(array){
+    return array.reduce((a,b) => a+b, 0);
+}
+
+//console.log(sumElements(intArray1));
+
+//Get all the prime numbers in an array
+
+var isPrime = function(item){
+  
+    for(let i = 2; i < item/2; i++){
+        if(item % i === 0) {
+            return false;
+        }
+    }
+    return true;
+
+}
+
+var primeNumbers = function(array){
+    var prime = [];
+for (var i = 0; i < array.length; i++) {
+  if(isPrime(array[i])) {
+      prime.push(array[i])
+  }
+}
+
+return prime;
+
+}
+
+//Return palindrome in an array
+
+var palindrome = function(array){
+    var arr = [];
+    array.map((number) =>{
+        var temp, rem, final = 0;
+        temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			final = final*10+rem;
+		}
+		if(final===temp)
+		{
+			arr.push(final);
+		}
+    });
+    
+    return arr;
+}
+
+console.log(palindrome(intArray1));
+
+//Median of two sorted array of  same size
+
+
+
+var median = function(array1, array2){
+    var mergedArray = [].concat(array1, array2);
+    mergedArray.sort((a,b) => a-b);
+    let medianIndex = mergedArray.length / 2;
+    
+    return mergedArray.length ===1 ? mergedArray[medianIndex] : (mergedArray[medianIndex-1] + mergedArray[medianIndex]) / 2;
+}
+
+//console.log(median(arr1, arr2));
+
+//Remove duplicates from an array2
+ var array3 = [33, 78, 33, 12, 7, 23, 12, 76, 33]
+var unique = function(array){
+    var result = [];
+    array.forEach(element => {
+        if (!result.includes(element)) {
+            result.push(element);
+        }
+    });
+    return result;
+}
+
+console.log(unique(array3))
+
+//Rotate an array by k times
+
+var rotate = function(arr, k){
+    var n = k % arr.length;
+    for(var i = 0; i <n; i++){
+    arr.splice(0, 0, arr.pop());
+    }
+    
+    return arr;
+}
+
+console.log(rotate(array3, 10));
+
+
+//===============================================================
+//Using Arrow Function
+
+//Print odd number of an array
+const oddNumber = (array) => {
+    for(let i = 0; i < array.length; i++){
+        if(array[i] % 2 !== 0){
+            console.log(array[i]);
+        }
+    }
+}
+
+//oddNumbers(intArray1);
+
+//Convert all the strings to title caps in a string array
+
+var capCase = (array) => {
+  return array.map(function (word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
+
+//console.log(capCase(strArray1));
+
+//Sum of all numbers in array
+
+const sumElement = (array) =>{
+    return array.reduce((a,b) => a+b, 0);
+}
+
+console.log(sumElements(intArray1));
+
+//Get all the prime numbers in an array
+
+const isPrimeNum = (item) =>{
+  
+    for(let i = 2; i < item/2; i++){
+        if(item % i === 0) {
+            return false;
+        }
+    }
+    return true;
+
+}
+
+var primeNumbers = (array) => {
+    var prime = [];
+for (var i = 0; i < array.length; i++) {
+  if(isPrime(array[i])) {
+      prime.push(array[i])
+  }
+}
+
+return prime;
+
+}
+
+console.log(primeNumbers(intArray1));
+
+// return all palindrome number in an array
+
+const palindromeNum = (array) =>{
+    var arr = [];
+    array.map((number) =>{
+        var temp, rem, final = 0;
+        temp = number;
+		while(number>0)
+		{
+			rem = number%10;
+			number = parseInt(number/10);
+			final = final*10+rem;
+		}
+		if(final===temp)
+		{
+			arr.push(final);
+		}
+    });
+    
+    return arr;
+}
+
+console.log(palindrome(intArray1));
+
+
+
+
+
