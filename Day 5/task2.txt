@@ -1,0 +1,105 @@
+//Resume Data in JSON Format
+
+
+{
+  "basics": {
+    "name": "Nishant Parashar",
+    "label": "",
+    "picture": "",
+    "email": "nnishant.parashar@gmail.com",
+    "phone": 9898989898,
+    "degree": {
+        "UG": "BCA",
+        "PG": "MCA"
+    },
+  "summary": "A java Backend developer with knowledge of core java, spring framework, Python and golang",
+    "location": {
+      "address": "Hamilton Homes",
+      "postalCode": 566009,
+      "city": "Bengaluru"
+    },
+  "work": [
+    {
+      "company": "Accuknox India Pvt Ltd.",
+      "position": "Junior Java Developer",
+      "startDate": "2022-04-01",
+      "endDate": "2022-09-30",
+      "summary": "Part of Data Pipeline, API/POC team on a cyber security project",
+      "highlights": 
+        "gained experience working with goggle cloud platform, jenkins, kubernetes and docker"
+      
+    }
+  ],
+  
+  "education": [
+    {
+      "institution": "Institute of Information Technology & Management",
+      "area": "Computer Applications",
+      "studyType": "Regular",
+      "startDate": "2009-08-03",
+      "endDate": "2012-07-31",
+      "gpa": "6.1",
+      "course": "BCA"
+    },
+    {
+      "institution": "Indira Gandhi National Open University",
+      "area": "Computer Applications",
+      "studyType": "Distance",
+      "startDate": "2018-03-20",
+      "endDate": "2021-12-30",
+      "gpa": "5.9",
+      "course": "MCA"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Java",
+      "level": "Intermediate",
+      "keywords": [
+        "Oops", "Collections", "I/O", "MultiThreading", "Exception Handling"
+      ]
+    },
+    {
+      "name": "Spring Framework",
+      "level": "Intermediate",
+      "keywords": [
+        "Spring core", "MVC", "Hibernate", "Spring Boot", "Spring Cloud"
+      ]
+    },
+    {
+      "name": "Python",
+      "level": "Beginner",
+      "keywords": [
+        "Object & Data constructor", "Decorator & generator", "Exception Handling", "Working with Files"
+      ]
+    },
+    {
+      "name": "Golang",
+      "level": "Intermediate",
+      "keywords": [
+        "Loops & Functions", "Maps", "Interfaces", "Channels & Routines"
+      ]
+    },
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Conversational "
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Maithili",
+      "fluency": "Fluent(Mother Tongue)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "New Technologies, Music, Films"
+    }
+  ]
+}
+    
+}

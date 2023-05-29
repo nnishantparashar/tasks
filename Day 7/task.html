@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color:red;
+        }
+    </style>
+    <script>
+
+            function myFunc(){
+                var xmlHTTP = new XMLHttpRequest(); //initialize the XMLHTTPReq
+                xmlHTTP.open('GET', 'https://restcountries.com/v3.1/all', true); //hitting the API
+                xmlHTTP.send(); // sending the req
+
+                //get the response
+                xmlHTTP.onreadystatechange = function(){
+                    var response = JSON.parse(xmlHTTP.responseText)
+                    
+                    //Get all the countries from Asia continent/region using filter function.
+                    
+                    const asianCountries = response.filter(function (country) {
+                        return country.continents === 'Asia' || country.region === 'Asia';
+                    });
+                    console.log(asianCountries);
+
+                    //Get all the countries with a population less than 2 lakhs using filter funtion.
+
+                    const populationBelow2 = JSON.parse(xmlHTTP.responseText).filter(function (country) {
+                        return country.population < 200000;
+                    });
+                    console.log(populationBelow2);
+
+                    //Print the following details name, capital, flag using forEach function
+
+                    response.forEach((country) => {
+                        console.log(country.name);
+                        console.log(country.capital);
+                        console.log(country.flag);
+                    });
+
+                    //Print the total population of countries using reduce function
+
+                    var popList = response.map((country) => {
+                        return country.population
+                    });
+
+                    const totalPop = popList.reduce((acc, value) =>{
+                        return acc + value;
+                    }, 0);
+                    console.log(totalPop);
+
+                    //Print the country which uses US Dollars as currency.
+
+                    function isUSD(country) {
+                        return country.currencies.USD.name === 'United States dollar';
+                    }
+
+                    console.log(response.find(isUSD).name);
+                }
+            }
+
+    </script>
+</head>
+<body>
+    <h1>Check Console for Response</h1>
+    <div id="users"></div>
+    <button onclick="myFunc()">Click to get Response</button>
+</body>
+</html>
