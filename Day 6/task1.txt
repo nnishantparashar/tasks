@@ -1,0 +1,31 @@
+//Movie Class
+
+class Movie{
+
+    constructor(title, studio, rating='PG'){
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+    
+    getPG(movies){
+        let filtered = movies.filter((movie) => {
+           return movie.rating === 'PG'
+        });
+        
+        return filtered;
+    }
+    
+}
+
+const myMovie = new Movie("Casino Royale", "Eon Productions", "PG13");
+
+const movieList = [{title:"Casino Royale", studio:"Eon Productions", rating:"PG13"},{title:"Stroke", studio:"Ben Productions", rating:"PG"}, {title:"Gravity", studio:"Charlie Productions", rating:"R"}, {title:"Volcano", studio:"Avon Productions", rating:"PG"}];
+console.log(myMovie);
+
+
+var pgMovie = myMovie.getPG(movieList);
+
+console.log(pgMovie);
+
+

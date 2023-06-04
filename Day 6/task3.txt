@@ -1,0 +1,75 @@
+//Write a person class to hold all the details 
+
+class Person{
+    constructor(name, age, phone, education, city, work, email, address){
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
+        this.education = education;
+        this.city = city;
+        this.work = work;
+	    this.email = email
+	    this.address = address
+    }
+    
+    setName(name){
+        this.name = name;
+    }
+    
+    setAge(age){
+        this.age = age;
+    }
+    setPhone(phone){
+        this.phone = phone;
+    }
+    
+    setEducation(education){
+        this.education = education;
+    }
+    setCity(city){
+        this.city = city;
+    }
+    
+    setWork(work){
+        this.work = work;
+    }
+	setEmail(email){
+		this.email = email;
+	}
+	setAddress(address){
+		this.address = address;
+	}
+
+    getPersonDetails(){
+        console.log('Name ', this.name);
+        console.log('Age ', this.age);
+        console.log('Phone ', this.phone);
+        console.log('Education ', this.education);
+        console.log('City ', this.city);
+        console.log('Work ', this.work);
+        console.log('Email ', this.email);
+        console.log('Address ', this.address);
+    }
+
+}
+
+const first = new Person();
+first.setName('arun');
+first.setAge(34);
+first.setPhone(99990088);
+first.setEducation('BTech');
+first.setCity('New Delhi');
+first.setWork('Web Developer');
+first.setEmail('first@gmail.com');
+first.setAddress('A-44, Phase-4, Saket Nagar, Bengaluru-560098')
+
+first.getPersonDetails();
+
+console.log('');
+
+const second = new Person('ajay', 56, 987678, 'MCA', 'Bengaluru', 'Consultant', 'second@testMail.com', 'park city, street 1, Kormangala, Bengaluru-576709');
+
+
+
+
+second.getPersonDetails();
