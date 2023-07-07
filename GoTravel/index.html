@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./script.js"></script>
+    <title>GoTravel - Your Travel Partner</title>
+  </head>
+  <body>
+    <!--navbar section-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+      <div class="container-fluid m-2">
+        <a class="navbar-brand" href="#">
+          <h4>Go Travel</h4>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="true"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse show" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item me-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#destination">Destination</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-light me-2 px-3" type="submit">
+              SignUp
+            </button>
+            <button class="btn btn-outline-light px-3" type="submit">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- banner(sliding) section-->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item drk active">
+          <img src="./img/banner1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h3>Enjoy With Your Club &amp; Create Memories</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+            <button class="btn btn-light py-2 px-4">Explore Now</button>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img src="./img/banner2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h3>Enjoy With Your Club &amp; Create Memories</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+            <button class="btn btn-light py-2 px-4">Explore Now</button>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img src="./img/banner3.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h3>Enjoy With Your Club &amp; Create Memories</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+            <button class="btn btn-light py-2 px-4">Explore Now</button>
+          </div>
+        </div>
+        <div class="carousel-item drk">
+          <img src="./img/banner4.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <h3>Enjoy With Your Club &amp; Create Memories</h3>
+            <p>Some representative placeholder content for the first slide.</p>
+            <button class="btn btn-light py-2 px-4">Explore Now</button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--about section-->
+    <section>
+      <div class="container" id="aboutUs">
+        <div class="row p-5 justify-content-center align-items-center">
+          <div class="col-md-6 mt-5 mb-4">
+            <p class="fw-bold text-success text-sm-center text-md-start">
+              About Us
+            </p>
+            <h3 class="fw-bold text-sm-center text-md-start">
+              Our Journey is Started With a Determination To Travel All Around
+              This World
+            </h3>
+            <p class="text-sm-center text-md-start">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              quo accusantium eveniet! Eligendi, officia! Minima soluta maxime
+              minus explicabo accusamus amet quaerat optio, saepe hic dolor vel
+              iure velit enim?
+            </p>
+          </div>
+
+          <div class="col-md-6" style="height: 50vh">
+            <img src="./img/about.jpg" class="img-fluid h-100 w-100" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--destination section-->
+
+    <section class="destination" id="destination">
+      <div class="container">
+        <div class="row justify-content-center m-2">
+          <div class="col-lg-6">
+            <div class="text-success text-center">Destination</div>
+            <h3 class="text-center">
+              Explore The Breath-Taking Adventures With Us
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid p-5">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="card">
+              <img src="./img/destination1.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <div class="fw-bold text-center">
+                  Get Into Wild In Indonesia
+                </div>
+                <div class="offer">
+                  <p>3 Days 4 Nights</p>
+                  <p class="fw-bold">Rs:19,999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card">
+              <img src="./img/destination2.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <div class="fw-bold text-center">
+                  Get Into Wild In Indonesia
+                </div>
+                <div class="offer">
+                  <p>3 Days 4 Nights</p>
+                  <p class="fw-bold">Rs:19,999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card">
+              <img src="./img/destination3.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <div class="fw-bold text-center">
+                  Get Into Wild In Indonesia
+                </div>
+                <div class="offer">
+                  <p>3 Days 4 Nights</p>
+                  <p class="fw-bold">Rs:19,999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="card">
+              <img src="./img/destination4.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <div class="fw-bold text-center">
+                  Get Into Wild In Indonesia
+                </div>
+                <div class="offer">
+                  <p>3 Days 4 Nights</p>
+                  <p class="fw-bold">Rs:19,999</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--testimonial section-->
+
+    <section class="testimonial" id="testimonial">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              id="carouselExampleControls"
+              class="carousel slide carousel-dark pointer-event"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <div class="feedback">
+                    <p class="text-center w-75">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Possimus ad sit illo itaque, maiores dolores voluptates
+                      exercitationem! Molestias illo officiis omnis. Ipsa sed
+                      doloribus laboriosam explicabo odit, optio similique
+                      dolorem.
+                    </p>
+                    <p class="text-center client">Elizabath</p>
+                    <p class="info text-center">Client</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="feedback">
+                    <p class="text-center w-75">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Possimus ad sit illo itaque, maiores dolores voluptates
+                      exercitationem! Molestias illo officiis omnis. Ipsa sed
+                      doloribus laboriosam explicabo odit, optio similique
+                      dolorem.
+                    </p>
+                    <p class="text-center client">Naveen Patnaik</p>
+                    <p class="info text-center">Client</p>
+                  </div>
+                </div>
+                <div class="carousel-item active">
+                  <div class="feedback">
+                    <p class="text-center w-75">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Possimus ad sit illo itaque, maiores dolores voluptates
+                      exercitationem! Molestias illo officiis omnis. Ipsa sed
+                      doloribus laboriosam explicabo odit, optio similique
+                      dolorem.
+                    </p>
+                    <p class="text-center client">Ahmed Shezath</p>
+                    <p class="info text-center">Client</p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--contact section-->
+
+    <section class="contactUs" id="contactUs">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Subscribe To Our News-Letter</h4>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Agree All the Terms &amp; Services</label
+                >
+              </div>
+              <button type="submit" class="btn btn-success">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--footer section-->
+
+    <section class="footer bg-success p-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="text-center text-white">
+              ThIs Website is Created By Nishant Parashar For GUVI WebProject
+              Task @2023
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      async=""
+      defer=""
+    ></script>
+  </body>
+</html>
