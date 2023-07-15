@@ -15,12 +15,12 @@ const PriceCard = (props) =>{
                 <ul className="data-ul">
                   {
                     props.plan.available.map((item, index) => {
-                      return <li className={`available-${index}`}><span><img className='icon' src={check}/></span><span><b>  {item.highlighted}</b></span><span> {item.normal}</span></li>
+                      return <li className={`available-${index}`}><span><img className='icon' src={check} alt=""/></span><span><b>  {item.highlighted}</b></span><span> {item.normal}</span></li>
                     })
                   }
                   {
                     props.plan.notAvailable.map((item)=>{
-                      return <li className='not-available'><span><img className='icon' src={wrong} /></span>  {item}</li>
+                      return <li className='not-available'><span><img className='icon' src={wrong} alt=""/></span>  {item}</li>
                     })
                   }
                  
