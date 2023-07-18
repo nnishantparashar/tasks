@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+
+@-ms-viewport{
+    width: device-width;
+  }
+
+p{
+    font-size: 12px;
+}
+
+.marked {
+    color: red;
+}
+.form {
+  border: 1px solid #9c9c9c;
+  background-color: white;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
+}
+
+.survey-form {
+  padding: 20px;
+}
+
+.horizontal-scroll {
+    overflow: hidden;
+    overflow-x: auto;
+    clear: both;
+    width: 100%;
+  }
+  
+  .my-table {
+    min-width: rem-calc(640);
+  }
+
+th {
+    font-size: 12px;
+}
+
+td {
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+ /*.rating {
+     width: 208px;
+     height: 40px;
+     margin: 0 auto;
+     padding: 40px 50px;
+     border: 1px solid #ccc;
+     background: #f9f9f9;
+}*/
+ .rating label {
+     float: right;
+     position: relative;
+     width: 40px;
+     height: 40px;
+     cursor: pointer;
+}
+/*.rating label:not(:first-of-type) {
+     padding-right: 10px;
+}*/
+ .rating label:before {
+     content: "\2605";
+     font-size: 35px;
+     color: #ccc;
+     line-height: 1;
+}
+ .rating input {
+     display: none;
+}
+ .rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+     color: #f9df4a;
+}
